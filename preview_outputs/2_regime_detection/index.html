@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neural Regime Detection Engine</title>
+  <style>
+    :root {
+      --bg: #060a12; --panel: #101827; --text: #e6edf3; --muted: #9aa7b8;
+      --accent: #42d7ff; --border: #1f2a44;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 30px 20px 46px; }
+    .back { color: var(--accent); text-decoration: none; font-weight: 600; }
+    h1 { margin: 12px 0 8px; font-size: clamp(1.4rem, 2.8vw, 2rem); }
+    p { color: var(--muted); margin: 0 0 20px; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; cursor: zoom-in; }
+    .cap { padding: 10px 12px; font-size: 0.9rem; color: var(--muted); }
+    .modal { position: fixed; inset: 0; background: rgba(3,6,12,0.92); display: none; place-items: center; padding: 20px; z-index: 10; }
+    .modal img { width: min(1300px, 95vw); max-height: 92vh; object-fit: contain; border-radius: 10px; border: 1px solid #27365a; cursor: zoom-out; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../">← Back to Showcase</a>
+    <h1>Neural Regime Detection Engine</h1>
+    <p>Regime transition analysis with clustering confidence, PCA projection, and volatility-state visualization.</p>
+
+    <section class="grid">
+      <article class="card"><img src="./full_dashboard.png" alt="Full dashboard" /><div class="cap">Full Regime Detection Dashboard</div></article>
+      <article class="card"><img src="./price_with_regimes.png" alt="Price with regimes" /><div class="cap">Price Series with Regime Overlay</div></article>
+      <article class="card"><img src="./3d_surface_hd.png" alt="3D regime surface" /><div class="cap">3D Volatility-Regime Surface</div></article>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <img id="modal-img" src="" alt="Expanded chart" />
+  </div>
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    document.querySelectorAll(".card img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modalImg.src = img.src;
+        modal.style.display = "grid";
+      });
+    });
+    modal.addEventListener("click", () => { modal.style.display = "none"; });
+  </script>
+</body>
+</html>
