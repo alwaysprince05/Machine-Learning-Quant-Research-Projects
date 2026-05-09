@@ -1,8 +1,18 @@
 # 🧠 Machine Learning & Quantitative Research Projects
 
+[![View Live App](https://img.shields.io/badge/View-Live%20App-0A66C2?style=for-the-badge&logo=huggingface&logoColor=white)](https://alwaysprince05e-ml-quant-research-dashboard.static.hf.space/index.html)
+
 > **Author:** Prince Maurya  
 > **GitHub:** [alwaysprince05](https://github.com/alwaysprince05)  
 > **Focus:** Machine Learning · Quantitative Finance · Market Microstructure · AI Research
+
+---
+
+## 🚀 Live Deployment
+
+Explore the deployed interactive dashboard here:
+
+**🔗 [View Live App](https://alwaysprince05e-ml-quant-research-dashboard.static.hf.space/index.html)**
 
 ---
 
